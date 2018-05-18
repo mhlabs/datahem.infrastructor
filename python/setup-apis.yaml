@@ -1,0 +1,51 @@
+# gcloud deployment-manager deployments create setup-apis --config setup-apis.yaml --preview
+
+imports:
+- path: enable-api-template.py
+
+resources:
+#enable api:s
+- name: pubsub-api
+  type: enable-api-template.py
+  properties:
+    api: pubsub.googleapis.com
+
+- name: cloudkms-api
+  type: enable-api-template.py
+  properties:
+    api: cloudkms.googleapis.com
+
+#- name: storageapi-api
+#  type: enable-api-template.py
+#  properties:
+#    api: storage-api.googleapis.com
+
+#- name: storagecomponent-api
+#  type: enable-api-template.py
+#  properties:
+#    api: storage-component.googleapis.com
+
+- name: dataflow-api
+  type: enable-api-template.py
+  properties:
+    api: dataflow.googleapis.com
+
+- name: compute-api
+  type: enable-api-template.py
+  properties:
+    api: compute.googleapis.com
+
+#- name: bigqueryjson-api
+#  type: enable-api-template.py
+#  properties:
+#    api: bigquery-json.googleapis.com
+
+- name: sourcerepo-api
+  type: enable-api-template.py
+  properties:
+    api: sourcerepo.googleapis.com
+
+- name: composer-api
+  type: enable-api-template.py
+  properties:
+    api: composer.googleapis.com
