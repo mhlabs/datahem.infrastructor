@@ -1,6 +1,6 @@
 """Creates pubsub topics and subscriptions for a new google analytics property."""
-# gcloud deployment-manager deployments create enable-pubsub-apis --template enable-api-template.py --properties api:pubsub.googleapis.com --preview
-# gcloud deployment-manager deployments update enable-pubsub-apis --template enable-api-template.py --properties api:pubsub.googleapis.com --preview
+# gcloud deployment-manager deployments create processor-bucket --template create-bucket-template.py --properties location:europe-west1,suffix:-processor --preview
+# gcloud deployment-manager deployments update processor-bucket --template create-bucket-template.py --properties location:europe-west1,suffix:-processor --preview
 
 def GenerateConfig(context):
   """Generate configuration."""
