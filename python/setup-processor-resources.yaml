@@ -1,4 +1,4 @@
-# gcloud deployment-manager deployments create setup-processor --config setup-processor-resources.yaml --preview
+# gcloud deployment-manager deployments create setup-processor --config setup-processor-resources.yaml
 
 imports:
 - path: create-bucket-template.py
@@ -9,7 +9,7 @@ resources:
   type: create-bucket-template.py
   properties:
     location: europe-west1
-    bucketSuffix: -processor
+    bucketSuffix: -processor2
 
 - name: bigquery-backup-dataset
   type: create-bigquery-dataset-template.py

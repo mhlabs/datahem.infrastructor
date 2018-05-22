@@ -19,7 +19,7 @@ def GenerateConfig(context):
       'properties': {
           'datasetReference': {
               'datasetId': AlphaNum(context.properties['streamId'])
-          }
+          },
           'location': context.properties['location']
       }
   })
