@@ -9,7 +9,7 @@ resources:
   type: create-bucket-template.py
   properties:
     location: europe-west1
-    bucketSuffix: -processor2
+    bucketSuffix: -processor
 
 - name: bigquery-backup-dataset
   type: create-bigquery-dataset-template.py
