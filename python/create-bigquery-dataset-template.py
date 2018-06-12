@@ -1,5 +1,5 @@
 """Creates a bigquery dataset."""
-# gcloud deployment-manager deployments create bigquery-backup-dataset --template create-bigquery-dataset.py --properties streamId:backup,location:EU
+# gcloud deployment-manager deployments create bigquery-backup-dataset --template create-bigquery-dataset-template.py --properties streamId:backup,location:EU
 
 def AlphaNum(stream):
   return "".join([ c if c.isalnum() else "" for c in stream ])
